@@ -10,7 +10,8 @@ export function getApiBaseUrl() {
 
 export function getApiUrl(resource) {
   const normalizedResource = resource.startsWith('/') ? resource : `/${resource}`;
-  return `${getApiBaseUrl()}/api${normalizedResource}`;
+  const withTrailingSlash = normalizedResource.endsWith('/') ? normalizedResource : `${normalizedResource}/`;
+  return `${getApiBaseUrl()}/api${withTrailingSlash}`;
 }
 
 export function normalizeCollection(payload) {

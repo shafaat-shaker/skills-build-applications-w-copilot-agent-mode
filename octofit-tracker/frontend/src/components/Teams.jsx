@@ -9,7 +9,7 @@ function Teams() {
   useEffect(() => {
     async function loadTeams() {
       try {
-        const payload = await fetchCollection('/teams');
+        const payload = await fetchCollection('/teams/');
         setTeams(normalizeCollection(payload));
       } catch (err) {
         setError(err.message);

@@ -9,7 +9,7 @@ function Activities() {
   useEffect(() => {
     async function loadActivities() {
       try {
-        const payload = await fetchCollection('/activities');
+        const payload = await fetchCollection('/activities/');
         setActivities(normalizeCollection(payload));
       } catch (err) {
         setError(err.message);

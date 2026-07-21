@@ -9,7 +9,7 @@ function Workouts() {
   useEffect(() => {
     async function loadWorkouts() {
       try {
-        const payload = await fetchCollection('/workouts');
+        const payload = await fetchCollection('/workouts/');
         setWorkouts(normalizeCollection(payload));
       } catch (err) {
         setError(err.message);

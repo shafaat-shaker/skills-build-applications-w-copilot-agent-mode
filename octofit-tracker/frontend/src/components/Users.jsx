@@ -9,7 +9,7 @@ function Users() {
   useEffect(() => {
     async function loadUsers() {
       try {
-        const payload = await fetchCollection('/users');
+        const payload = await fetchCollection('/users/');
         setUsers(normalizeCollection(payload));
       } catch (err) {
         setError(err.message);

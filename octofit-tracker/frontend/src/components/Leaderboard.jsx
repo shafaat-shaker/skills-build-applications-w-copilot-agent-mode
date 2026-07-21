@@ -9,7 +9,7 @@ function Leaderboard() {
   useEffect(() => {
     async function loadLeaderboard() {
       try {
-        const payload = await fetchCollection('/leaderboard');
+        const payload = await fetchCollection('/leaderboard/');
         setLeaders(normalizeCollection(payload));
       } catch (err) {
         setError(err.message);
