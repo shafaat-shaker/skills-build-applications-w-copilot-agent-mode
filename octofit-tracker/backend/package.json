@@ -1,4 +1,14 @@
 {
+  "name": "octofit-tracker-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "seed": "tsc -p tsconfig.json --outDir dist-seed && node dist-seed/scripts/seed.js"
+  },
   "dependencies": {
     "express": "^5.2.1",
     "mongoose": "^9.8.0"
